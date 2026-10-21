@@ -1,0 +1,32 @@
+{
+  "id": "org.mass4.turian.obj",
+  "version": "1.0.3",
+  "displayName": "Wavefront OBJ importer",
+  "description": "Editor-only Wavefront OBJ import into glTF 2.0 geometry.",
+  "author": "MASS4",
+  "license": "MIT",
+  "exclude": [
+    "Brick~/Tests",
+    ".github",
+    ".gitignore",
+    ".script-*.py",
+    ".script-*.cs",
+    ".script-*.sh"
+  ],
+  "editorOnly": true,
+  "categories": [
+    "turian:importers"
+  ],
+  "keywords": [
+    "obj",
+    "mesh",
+    "importer"
+  ],
+  "roles": {
+    "source": "Brick~/Source",
+    "tests": "Brick~/Tests",
+    "precast": "Brick~/Precast",
+    "bake": "Brick~/Bake"
+  },
+  "bake": "auto"
+}

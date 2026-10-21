@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <OutputType>Exe</OutputType>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
+        <IsTestProject>true</IsTestProject>
+        <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
+        <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <DisableMSBuildAssemblyCopyCheck>true</DisableMSBuildAssemblyCopyCheck>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../../Source/Turian.Editor.Obj/Turian.Editor.Obj.csproj"/>
+        <ProjectReference Include="$(TurianDir)Turian/Editor/Core/Turian.Editor.Core.csproj"/>
+    </ItemGroup>
+
+    <!-- The game launcher templates an exported project is generated from. -->
+    <ItemGroup>
+        <Content Include="$(TurianDir)Turian/Editor/CLI/Platform/**/*"
+                 Exclude="$(TurianDir)Turian/Editor/CLI/Platform/**/bin/**;$(TurianDir)Turian/Editor/CLI/Platform/**/obj/**"
+                 LinkBase="Platform"
+                 CopyToOutputDirectory="PreserveNewest"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Build" Version="18.9.6"/>
+        <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.12.0"/>
+        <PackageReference Include="xunit.v3" Version="4.0.2"/>
+    </ItemGroup>
+
+</Project>
