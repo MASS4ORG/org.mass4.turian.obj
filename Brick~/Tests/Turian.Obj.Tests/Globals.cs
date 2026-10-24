@@ -1,5 +1,5 @@
 global using System.Numerics;
-global using Gaya.Packages;
+global using MASS4.Bricks;
 global using Microsoft.Extensions.Logging.Abstractions;
 global using OpenAssetPackage;
 global using Turian.Editor.Core;
